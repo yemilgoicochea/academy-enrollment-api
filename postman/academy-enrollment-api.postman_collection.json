@@ -1,0 +1,1069 @@
+{
+	"info": {
+		"_postman_id": "f1ca7ecd-226f-4fe2-8dbe-d832beacc136",
+		"name": "academy-enrollment-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31243998"
+	},
+	"item": [
+		{
+			"name": "Classic Annotation",
+			"item": [
+				{
+					"name": "course",
+					"item": [
+						{
+							"name": "courses findAll",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/courses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"courses"
+									]
+								},
+								"description": "Generated from cURL: curl -X GET --location \"http://localhost/students\""
+							},
+							"response": []
+						},
+						{
+							"name": "courses findById",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/courses/66e68dc3a2f8ab0b12b25b92",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"courses",
+										"66e68dc3a2f8ab0b12b25b92"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "courses save",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Fisica\",\r\n  \"shortName\": \"Fi\",\r\n  \"status\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/courses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"courses"
+									]
+								},
+								"description": "Generated from cURL: curl -X POST \"http://localhost:8080/students\" -H \"Content-Type: application/json\" -d '{\r\n  \"id\": \"student-id\",\r\n  \"name\": \"John Doe\",\r\n  \"age\": 20,\r\n  \"email\": \"john.doe@example.com\"\r\n}'"
+							},
+							"response": []
+						},
+						{
+							"name": "courses update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Historia\",\r\n  \"shortName\": \"Hu M2D\",\r\n  \"status\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/courses/66e68dc3a2f8ab0b12b25b92",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"courses",
+										"66e68dc3a2f8ab0b12b25b92"
+									]
+								},
+								"description": "Generated from cURL: curl -X POST \"http://localhost:8080/students\" -H \"Content-Type: application/json\" -d '{\r\n  \"id\": \"student-id\",\r\n  \"name\": \"John Doe\",\r\n  \"age\": 20,\r\n  \"email\": \"john.doe@example.com\"\r\n}'"
+							},
+							"response": []
+						},
+						{
+							"name": "courses delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/courses/66e6890c4443bd66599f92c5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"courses",
+										"66e6890c4443bd66599f92c5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "student",
+					"item": [
+						{
+							"name": "students findAll",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/students",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"students"
+									]
+								},
+								"description": "Generated from cURL: curl -X GET --location \"http://localhost/students\""
+							},
+							"response": []
+						},
+						{
+							"name": "students findById",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/students/66e6890e4443bd66599f92c6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"students",
+										"66e6890e4443bd66599f92c6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "students save",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe\",\r\n  \"dni\" : \"87654321\",\r\n  \"age\": 20\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/students",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"students"
+									]
+								},
+								"description": "Generated from cURL: curl -X POST \"http://localhost:8080/students\" -H \"Content-Type: application/json\" -d '{\r\n  \"id\": \"student-id\",\r\n  \"name\": \"John Doe\",\r\n  \"age\": 20,\r\n  \"email\": \"john.doe@example.com\"\r\n}'"
+							},
+							"response": []
+						},
+						{
+							"name": "students update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe MD\",\r\n  \"dni\" : \"87654321\",\r\n  \"age\": 20\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/students/66e6890c4443bd66599f92c5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"students",
+										"66e6890c4443bd66599f92c5"
+									]
+								},
+								"description": "Generated from cURL: curl -X POST \"http://localhost:8080/students\" -H \"Content-Type: application/json\" -d '{\r\n  \"id\": \"student-id\",\r\n  \"name\": \"John Doe\",\r\n  \"age\": 20,\r\n  \"email\": \"john.doe@example.com\"\r\n}'"
+							},
+							"response": []
+						},
+						{
+							"name": "students delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/students/66e6890c4443bd66599f92c5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"students",
+										"66e6890c4443bd66599f92c5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "students findAll Order By Age",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/students/age?sort=DESC",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"students",
+										"age"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "DESC"
+										}
+									]
+								},
+								"description": "Generated from cURL: curl -X GET --location \"http://localhost/students\""
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "enrollments",
+					"item": [
+						{
+							"name": "enrollments findAll",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/enrollments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"enrollments"
+									]
+								},
+								"description": "Generated from cURL: curl -X GET --location \"http://localhost/students\""
+							},
+							"response": []
+						},
+						{
+							"name": "enrollments register",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"enrollmentDateTime\": \"2024-09-20T08:50:00.000\",\r\n    \"student\": {\r\n        \"id\": \"66e6890e4443bd66599f92c6\",\r\n        \"firstName\": \"John\",\r\n        \"lastName\": \"Doe\",\r\n        \"dni\": \"87654321\",\r\n        \"age\": 20\r\n    },\r\n    \"courses\": [\r\n        {\r\n            \"id\": \"66e68dc3a2f8ab0b12b25b92\",\r\n            \"name\": \"Historia\",\r\n            \"shortName\": \"Hu M2D\",\r\n            \"status\": false\r\n        },\r\n        {\r\n            \"id\": \"66e68e27a2f8ab0b12b25b93\",\r\n            \"name\": \"Fisica\",\r\n            \"shortName\": \"Fi\",\r\n            \"status\": true\r\n        }\r\n    ],\r\n    \"status\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/enrollments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"enrollments"
+									]
+								},
+								"description": "Generated from cURL: curl -X POST \"http://localhost:8080/students\" -H \"Content-Type: application/json\" -d '{\r\n  \"id\": \"student-id\",\r\n  \"name\": \"John Doe\",\r\n  \"age\": 20,\r\n  \"email\": \"john.doe@example.com\"\r\n}'"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "security",
+					"item": [
+						{
+							"name": "login",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Check if the response object is defined\r",
+											"if (pm.response) {\r",
+											"    // Check if the response is JSON\r",
+											"    if (pm.response.headers.get(\"Content-Type\").includes(\"application/json\")) {\r",
+											"        // Parse the JSON response\r",
+											"        var jsonData = pm.response.json();\r",
+											"        // Save the token to an environment variable\r",
+											"        pm.environment.set(\"TOKEN\", jsonData.token);\r",
+											"    } else {\r",
+											"        console.error(\"The response is not JSON\");\r",
+											"    }\r",
+											"} else {\r",
+											"    console.error(\"The response object is undefined\");\r",
+											"}"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"admin\",\r\n  \"password\": \"12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Funcional Endpoints",
+			"item": [
+				{
+					"name": "course",
+					"item": [
+						{
+							"name": "courses findAll",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v2/courses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v2",
+										"courses"
+									]
+								},
+								"description": "Generated from cURL: curl -X GET --location \"http://localhost/students\""
+							},
+							"response": []
+						},
+						{
+							"name": "courses findById",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v2/courses/66e68dc3a2f8ab0b12b25b92",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v2",
+										"courses",
+										"66e68dc3a2f8ab0b12b25b92"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "courses save",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Fisica\",\r\n  \"shortName\": \"Fi\",\r\n  \"status\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/v2/courses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v2",
+										"courses"
+									]
+								},
+								"description": "Generated from cURL: curl -X POST \"http://localhost:8080/students\" -H \"Content-Type: application/json\" -d '{\r\n  \"id\": \"student-id\",\r\n  \"name\": \"John Doe\",\r\n  \"age\": 20,\r\n  \"email\": \"john.doe@example.com\"\r\n}'"
+							},
+							"response": []
+						},
+						{
+							"name": "courses update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Historia\",\r\n  \"shortName\": \"Hu M2D\",\r\n  \"status\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/v2/courses/66e68dc3a2f8ab0b12b25b92",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v2",
+										"courses",
+										"66e68dc3a2f8ab0b12b25b92"
+									]
+								},
+								"description": "Generated from cURL: curl -X POST \"http://localhost:8080/students\" -H \"Content-Type: application/json\" -d '{\r\n  \"id\": \"student-id\",\r\n  \"name\": \"John Doe\",\r\n  \"age\": 20,\r\n  \"email\": \"john.doe@example.com\"\r\n}'"
+							},
+							"response": []
+						},
+						{
+							"name": "courses delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v2/courses/66efc0f7ce8a127e971efa13",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v2",
+										"courses",
+										"66efc0f7ce8a127e971efa13"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "student",
+					"item": [
+						{
+							"name": "students findAll",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v2/students",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v2",
+										"students"
+									]
+								},
+								"description": "Generated from cURL: curl -X GET --location \"http://localhost/students\""
+							},
+							"response": []
+						},
+						{
+							"name": "students findById",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v2/students/66e6890e4443bd66599f92c6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v2",
+										"students",
+										"66e6890e4443bd66599f92c6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "students save",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe\",\r\n  \"dni\" : \"87654321\",\r\n  \"age\": 20\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/v2/students",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v2",
+										"students"
+									]
+								},
+								"description": "Generated from cURL: curl -X POST \"http://localhost:8080/students\" -H \"Content-Type: application/json\" -d '{\r\n  \"id\": \"student-id\",\r\n  \"name\": \"John Doe\",\r\n  \"age\": 20,\r\n  \"email\": \"john.doe@example.com\"\r\n}'"
+							},
+							"response": []
+						},
+						{
+							"name": "students update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe MD\",\r\n  \"dni\" : \"87654321\",\r\n  \"age\": 25\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/v2/students/66efc8b927f84c0270633dd2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v2",
+										"students",
+										"66efc8b927f84c0270633dd2"
+									]
+								},
+								"description": "Generated from cURL: curl -X POST \"http://localhost:8080/students\" -H \"Content-Type: application/json\" -d '{\r\n  \"id\": \"student-id\",\r\n  \"name\": \"John Doe\",\r\n  \"age\": 20,\r\n  \"email\": \"john.doe@example.com\"\r\n}'"
+							},
+							"response": []
+						},
+						{
+							"name": "students delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v2/students/66efc8b927f84c0270633dd2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v2",
+										"students",
+										"66efc8b927f84c0270633dd2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "students findAll Order By Age",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v2/students/age?sort=DESC",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v2",
+										"students",
+										"age"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "DESC"
+										}
+									]
+								},
+								"description": "Generated from cURL: curl -X GET --location \"http://localhost/students\""
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "enrollments",
+					"item": [
+						{
+							"name": "enrollments findAll",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v2/enrollments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v2",
+										"enrollments"
+									]
+								},
+								"description": "Generated from cURL: curl -X GET --location \"http://localhost/students\""
+							},
+							"response": []
+						},
+						{
+							"name": "enrollments register",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"enrollmentDateTime\": \"2024-09-20T08:50:00.000\",\r\n    \"student\": {\r\n        \"id\": \"66e6890e4443bd66599f92c6\",\r\n        \"firstName\": \"John\",\r\n        \"lastName\": \"Doe\",\r\n        \"dni\": \"87654321\",\r\n        \"age\": 20\r\n    },\r\n    \"courses\": [\r\n        {\r\n            \"id\": \"66e68dc3a2f8ab0b12b25b92\",\r\n            \"name\": \"Historia\",\r\n            \"shortName\": \"Hu M2D\",\r\n            \"status\": false\r\n        },\r\n        {\r\n            \"id\": \"66e68e27a2f8ab0b12b25b93\",\r\n            \"name\": \"Fisica\",\r\n            \"shortName\": \"Fi\",\r\n            \"status\": true\r\n        }\r\n    ],\r\n    \"status\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/v2/enrollments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v2",
+										"enrollments"
+									]
+								},
+								"description": "Generated from cURL: curl -X POST \"http://localhost:8080/students\" -H \"Content-Type: application/json\" -d '{\r\n  \"id\": \"student-id\",\r\n  \"name\": \"John Doe\",\r\n  \"age\": 20,\r\n  \"email\": \"john.doe@example.com\"\r\n}'"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
